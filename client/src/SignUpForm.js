@@ -24,11 +24,14 @@ function SignUpForm({onLogin}) {
             password,
           }),
         })
-        .then(res => res.json())
-        .then(json => {
-            console.log(json)
-            if(json.errors) setErrors(Object.entries(json.errors))
-          })
+        .then((r) => {
+          if (r.ok) {
+            r.json()
+            .then((user) => onLogin(user));
+          } else {
+            r.json().then((err) => setErrors(err.errors));
+          }
+        });
       }
 
     return (
