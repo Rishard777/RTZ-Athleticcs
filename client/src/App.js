@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from './Login';
 import Home from './Home';
@@ -32,7 +31,7 @@ function App() {
 
     </BrowserRouter>
     </div>
-
+  )
   // if(user){
   //   return (
   //     <div className="App">
@@ -45,7 +44,7 @@ function App() {
   //     <Login  onLogin={handleLogin} />
   //   </div>
   // );
-)}
+}
   
 
 
