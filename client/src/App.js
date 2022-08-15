@@ -14,36 +14,6 @@ function App() {
     setUser(user);
   }
 
-  return (
-<div>
-    <NavBar />
-    
-  <BrowserRouter>
-    <Switch>
-      <Route path="/login">
-        <Login onLogin={handleLogin} />
-      </Route>
-
-      <Route exact path="/">
-        <Home />
-      </Route>
-    </Switch>
-
-    </BrowserRouter>
-    </div>
-  )
-  // if(user){
-  //   return (
-  //     <div className="App">
-  //       Welcome!
-  //     </div>
-  //   )
-  // } else
-  // return (
-  //   <div className="App">
-  //     <Login  onLogin={handleLogin} />
-  //   </div>
-  // );
 }
   
 
